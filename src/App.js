@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { useState } from 'react'
 import Menu from './Components/Menu'
 import Home from './Components/Home'
@@ -9,7 +9,7 @@ function App() {
   const [favoriteCities, setFavoriteCities] = useState([])
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Menu />
         <Routes>
           <Route path="/" element={<Home
@@ -19,7 +19,7 @@ function App() {
             setSelectedFavoriteCity={setSelectedFavoriteCity}
             favoriteCities={favoriteCities} />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
